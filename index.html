@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://w2websolutions.com/portfolioes.php -->
+<html lang="en" class="csstransforms csstransforms3d csstransitions"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+    <title></title>
+    
+        <meta property="og:title" content="Launch Your Website Today">
+		<meta property="og:site_name" content="http://w2websolutions.com">
+		<meta property="og:description" content="Still looking for Web Hosting? Get 60% off and Free Domain for a limited time.
+">
+		<meta property="og:type" content="article">
+	    <meta property="og:url" content="http://w2websolutions.com/get-quote.php">
+		
+		<meta property="og:image" content="http://www.24onlinenewspaper.com/img/hostgatonAds60.png">
+		<meta property="og:image:width" content="600">
+		<meta property="og:image:height" content="315">
+		<meta property="fb:app_id" content="969274449762740">		
+
+		<link rel="canonical" href="http://w2websolutions.com/get-quote.php">
+
+	<!-- core CSS -->
+    <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./index_files/font-awesome.min.css" rel="stylesheet">
+    <link href="./index_files/animate.min.css" rel="stylesheet">
+    <link href="./index_files/prettyPhoto.css" rel="stylesheet">
+    <link href="./index_files/main.css" rel="stylesheet">
+    <link href="./index_files/responsive.css" rel="stylesheet">
+	<link href="./index_files/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="http://w2websolutions.com/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://w2websolutions.com/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://w2websolutions.com/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://w2websolutions.com/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="http://w2websolutions.com/images/ico/apple-touch-icon-57-precomposed.png">
+	<script type="text/javascript" async="" src="./index_files/analytics.js.download"></script><script src="./index_files/jquery.js.download"></script><script>
+$(function() {
+$("#GenarateTicket").click(function(){
+	 var name=$("#name").val();  			
+ 	 var phone=$("#phone").val();
+	 var mail=$("#mail").val();
+  	 var selectopt=$("#selectopt").val();		
+	 var docnum=$("#docnum").val();	
+	 var estimate=$("#estimate").val();
+	 var requirements=$("#requirements").val();		
+	 var catcha=$("#catcha").val();
+	  	
+  		//Name check
+		 if(name.trim()== '')
+		   {$('#result').html('<div class="wornning">Warnning :    *Name field not empty</div>');
+		   $("#result").hide();
+			$("#result").fadeIn('slow');
+			$("#result").show();
+             return false;
+           }
+		 if(name.length <4)
+		   {$('#result').html('<div class="wornning">Warnning :    *Name min 4 character</div>');
+		   $("#result").hide();
+		   $("#result").fadeIn('slow');
+		   $("#result").show()
+            return false;
+           }
+		   if(name.length >3)
+		   {$('#namechaeck').html(' <img src="success_icon.png" width="16" height="31" style="padding-top:15px">');
+		   	$("#namechaeck").hide();
+			$("#namechaeck").fadeIn('slow');
+			$("#namechaeck").show();          
+           } 
+
+//Phone check
+		 if(phone.trim()== '')
+		   {$('#result').html('<div class="wornning">Warnning :   Phone field not empty</div>');
+		   $("#result").hide();
+			$("#result").fadeIn('slow');
+			$("#result").show();
+             return false;
+           }
+		   if(phone.length <10)
+		   {$('#result').html('<div class="wornning">Warnning :   Enter a valid phone number</div>');
+		   	$("#result").hide();
+			$("#result").fadeIn('slow');
+			$("#result").show();
+             return false;
+           }
+		   if(phone.length <= 11)
+		   {$('#phonechaeck').html(' <img src="success_icon.png" width="16" height="31" style="padding-top:15px">');
+		   	$("#phonechaeck").hide();
+			$("#phonechaeck").fadeIn('slow');
+			$("#phonechaeck").show();          
+           }
+		   
+//Mail check
+		     if(mail.trim()== ''){
+				$('#result').html('<div class="wornning">Warnning :   Email field is empty</div>');
+				$("#result").hide();
+				$("#result").fadeIn('slow');
+				$("#result").show();
+				 return false;
+            }
+            if(IsEmail(mail)==false){
+                $('#result').html('<div class="wornning">Warnning :   Enter a valid email</div>');
+				$("#result").hide();
+				$("#result").fadeIn('slow');
+				$("#result").show();
+                return false;
+            }
+			 if(IsEmail(mail)==true){
+                $('#mailcheck').html('<img src="success_icon.png" width="16" height="31" style="padding-top:15px">');
+				$("#mailcheck").hide();
+				$("#mailcheck").fadeIn('slow');
+				$("#mailcheck").show();                
+            }
+
+//Estimate  check		   
+		   if(estimate.trim()== '')
+		   {$('#result').html('<div class="wornning">Warnning :  Enter your minimum budget,Please.</div>');
+		   $("#result").hide();
+			$("#result").fadeIn('slow');
+			$("#result").show();
+             return false;
+           }
+		   if(estimate.length <2)
+		   {$('#result').html('<div class="wornning">Warnning :   Enter your minimum budget,Please e.g 50</div>');
+		   	$("#result").hide();
+			$("#result").fadeIn('slow');
+			$("#result").show();
+             return false;
+           }
+		   if(estimate.length >=2)
+		   {$('#estimatecheck').html(' <img src="success_icon.png" width="16" height="31" style="padding-top:15px">');
+		   	$("#estimatecheck").hide();
+			$("#estimatecheck").fadeIn('slow');
+			$("#estimatecheck").show();          
+           }
+//Requirements  check		   
+		   if(requirements.trim()== '')
+		   {$('#result').html('<div class="wornning">Warnning : Enter your  requirement.</div>');
+		   $("#result").hide();
+			$("#result").fadeIn('slow');
+			$("#result").show();
+             return false;
+           }
+		   if(requirements.length <20)
+		   {$('#result').html('<div class="wornning">Warnning :   Enter your  requirement,Please</div>');
+		   	$("#result").hide();
+			$("#result").fadeIn('slow');
+			$("#result").show();
+             return false;
+           }
+		   if(requirements.length >=21)
+		   {$('#requirementscheck').html(' <img src="success_icon.png" width="16" height="31" style="padding-top:15px">');
+		   	$("#requirementscheck").hide();
+			$("#requirementscheck").fadeIn('slow');
+			$("#requirementscheck").show();          
+           }
+//catcha check
+		 if(catcha.trim()== '')
+		   {$('#result').html('<div class="wornning">Warnning :   Captcha field not empty</div>');
+		   $("#result").hide();
+			$("#result").fadeIn('slow');
+			$("#result").show();
+             return false;
+           }
+		   if(catcha.length != 4)
+		   {$('#result').html('<div class="wornning">Warnning :   Enter a valid captcha</div>');
+		   	$("#result").hide();
+			$("#result").fadeIn('slow');
+			$("#result").show();
+             return false;
+           }
+		   	if(catcha !='')
+		   {$('#result').html('<div class="wornning">Warnning :   Captcha code not match</div>');
+		   	$("#result").hide();
+			$("#result").fadeIn('slow');
+			$("#result").show();
+			return false;          
+           }
+		   if(catcha=='')
+		   {$('#errorss').html(' <img src="success_icon.png" width="16" height="31" style="padding-top:15px">');
+		   	$("#errorss").hide();
+			$("#errorss").fadeIn('slow');
+			$("#errorss").show();          
+           }		   
+
+		  $("#GenarateTicket").hide();
+		  $("#loading").html('<img src="loading-animation.gif" />');
+		   
+ 		//alert(gender);			
+        // $('#result').val(catcha); 
+			  $.post("process.php",{name:name,phone:phone,mail:mail,estimate:estimate,requirements:requirements,catcha:catcha},function(data){
+			  $('#result').html(data);			   
+			  $("#loading").hide();
+			  $("#GenarateTicket").show();
+			  });
+					
+            });	
+			
+
+
+
+
+});
+<!--	$("#GenarateTicket").click(function(){
+
+	//alert($("#myform").serialize());
+	//});-->
+ function IsEmail(email) {
+        var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if(!regex.test(email)) {
+           return false;
+        }else{
+           return true;
+        }
+      }
+</script>
+	</head><!--/head-->
+
+<body class="" style=""> <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="top-number navbar-right"><p><!--We're Open! Only 11 hours 23 minutes left TODAY!-->&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<i class="glyphicon glyphicon-envelope"></i> info@w2websolutions.com <i class="fa fa-skype"></i> w2websolutions</p></div>
+                    </div>
+                    
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+       <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+               <div class="row"><div class="col-xs-12 col-md-4"> <div class="navbar-header">
+                     <a class="navbar-brand" href="http://w2websolutions.com/"><img src="./index_files/w2_logo.png" alt="logo" class="lbg img-responsive"></a>
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        Menu
+                    </button>
+                   
+                </div></div>
+				
+               <div class="col-xs-12 col-md-8"> <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="http://w2websolutions.com/">Home</a></li>
+                       
+                        <li><a href="http://w2websolutions.com/service.php">SERVICES</a></li>
+                        <li><a href="http://w2websolutions.com/expertise-areas.php">EXPERTISE AREA</a></li>
+                        <!--<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Blog Single</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">404</a></li>
+                                <li><a href="#">Shortcodes</a></li>
+                            </ul>
+                        </li>-->
+                        <li><a href="http://w2websolutions.com/portfolioes.php">PORTFOLIO</a></li> 
+						<li><a href="http://w2websolutions.com/get-quote.php" style=" padding:0px;"><img src="./index_files/web-solutions-qoute.png"></a></li> 
+					
+                                               
+                    </ul>
+                </div></div>
+        
+                </div>
+            </div><!--/.container-->
+
+  </nav><!--/nav-->
+	
+    </header><!--/header--><style type="text/css">.mibew-chat-wrapper{z-index: 99999;}</style><section id="portfolio">
+        <div class="container">
+            <div class="center">
+               <h2>Portfolio</h2>
+               <p class="lead">We help our clients plan, implement, and evolve their websites;here is one we made earlier take a look at some of our recent work</p>
+            </div>
+        
+
+            <ul class="portfolio-filter text-center">
+                <li><a class="btn btn-default active" href="http://w2websolutions.com/portfolioes.php#" data-filter="*">All</a></li>
+				<li><a class="btn btn-default" href="http://w2websolutions.com/portfolioes.php#" data-filter=".php-mysql">PHP &amp; Mysql</a></li>
+				<li><a class="btn btn-default" href="http://w2websolutions.com/portfolioes.php#" data-filter=".cakephp-mysql">Cakephp &amp; Mysql</a></li>
+				<li><a class="btn btn-default" href="http://w2websolutions.com/portfolioes.php#" data-filter=".ecommerce">eCommerce </a></li>
+                <li><a class="btn btn-default" href="http://w2websolutions.com/portfolioes.php#" data-filter=".zen-cart">Zen cart</a></li>
+				<li><a class="btn btn-default" href="http://w2websolutions.com/portfolioes.php#" data-filter=".bootstrap">Bootstrap</a></li>
+                <li><a class="btn btn-default" href="http://w2websolutions.com/portfolioes.php#" data-filter=".psd-html">PSD to HTML</a></li>
+                <li><a class="btn btn-default" href="http://w2websolutions.com/portfolioes.php#" data-filter=".wordpress">Wordpress</a></li>
+            </ul><!--/#portfolio-filter-->
+
+            <div class="row">
+                <div class="portfolio-items isotope" style="position: relative; overflow: hidden; height: 1230px;">
+                    <div class="portfolio-item php-mysql psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item1.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>ADS</h4>
+                                <p>ADS (Americas Digital Security) is a RAB security company which was founded in 2001 </p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item psd-html wordpress col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 0px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item2.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Bug Masters</h4>
+                                	<p>Bug Masters is a family owned corporation that currently provides pest control services </p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(540px, 0px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item3.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Fidelity Copier</h4>
+                                <p>Copier machine repair</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>        
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item psd-html zen-cart ecommerce col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(810px, 0px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item4.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Just Laptop Shop</h4>
+                                <p>Just Laptop is a online shop to selling various kinds of computer products and services.</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>           
+                    </div><!--/.portfolio-item-->
+          
+                    <div class="portfolio-item php-mysql psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 205px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item5.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Fire Alarm Houston</h4>
+                                <p> A RAB Security company, was founded in 2001. The purpose was to provide the Life Safety System to Houston</p>
+
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>      
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item php-mysql psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 205px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item6.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                   <h4>LMS Restoration</h4>
+                                <p>Our major service divisions are: Fire &amp; Water Damage Restoration, Nationwide Disaster &amp; Response etc.</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>         
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item php-mysql psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(540px, 205px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item7.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                   <h4>DIY Alarm </h4>
+                                <p> An authorized Honeywell Security product dealer. We want to offer only the best for our customers </p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item zen-cart psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(810px, 205px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item8.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Techexpert</h4>
+                                <p>All kinds of computers &amp; laptops repair services in Sydney on home and business</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+					
+					<div class="portfolio-item zen-cart psd-html ecommerce col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 410px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item9.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>PCN Tech</h4>
+                                <p> Australia's largest online retailer shop, with incredible deals on Phones, Tablets, Computers, Audio and more</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item9.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 410px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item10.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>football-jobs.com </h4>
+                                	<p>Football Jobs, Careers, Recruitment &amp; Employment in Football
+</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item10.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(540px, 410px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item11.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Smurfit Kappa</h4>
+                                <p>One of the leading providers of paper-based packaging solutions in the world</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item11.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>        
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item php-mysql psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(810px, 410px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item12.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Portable Alarm</h4>
+                                <p>The World's First and Finest Patented Portable wireless Home Security System.</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item12.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>           
+                    </div><!--/.portfolio-item-->
+          
+                    <div class="portfolio-item zen-cart psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 615px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item13.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>SBX Money</h4>
+                                <p>Major and historical money service businesses in Australia.</p>
+
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item13.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>      
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 615px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item14.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                   <h4>Holland</h4>
+                                <p>Tourism in the Netherlands</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item14.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>         
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(540px, 615px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item15.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                   <h4>Sims Welding Supply </h4>
+                                <p> Welding Supplies: Welding Jobs &amp; Projects  </p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item15.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(810px, 615px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item16.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Amber</h4>
+                                <p>A Sydney based marketing professional specialising in social media and digital marketing.</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item16.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+					
+					
+					<div class="portfolio-item wordpress psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 820px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item17.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>FIRST New York City </h4>
+                                <p> Nonprofit organization created to inspire youth to pursue further studies and careers in science and technology</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item17.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>        
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item psd-html col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 820px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item18.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Griffin</h4>
+                                <p>Incorporated has offered complete solutions for secure logistics and protection requirements.</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item18.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>           
+                    </div><!--/.portfolio-item-->
+          
+                    <div class="portfolio-item wordpress col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(540px, 820px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item19.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Pain Management and Injury Relief's </h4>
+                                <p> Thousand Oaks facility is state-of-the art and thoughtfully built to provide you with VIP service.
+
+</p>
+
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item19.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>      
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(810px, 820px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item20.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                   <h4>Zester Daily </h4>
+                                <p>An award-winning online destination for food, wine and travel enthusiasts eager to discover. </p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item20.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>         
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item php-mysql col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 1025px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item21.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                   <h4>SWEET DREAM ASSOCIATES  </h4>
+                                <p> 	
+A 100% EXPORT ORIENTED SUPPLIERS AND BUYING AGENT WITH FULL VERTICAL SET-UP</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item21.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item php-mysql col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(270px, 1025px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item22.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>ZIMS GLOBAL SOURCING</h4>
+                                <p>A readymade garment sourcing and buying house</p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item22.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+					  <div class="portfolio-item psd-html bootstrap cakephp-mysql col-xs-12 col-sm-3 col-md-3 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(540px, 1025px, 0px);">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="./index_files/item23.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h4>Qpay</h4>
+                                <p>QPay is the Internet Payment Gateway </p>
+                                    <a class="preview" href="http://w2websolutions.com/images/portfolio/full/item23.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+
+                </div>
+            </div>
+        </div>
+    </section><!--/#portfolio-item-->
+
+<section id="conatcat-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: hidden; animation-duration: 1000ms; animation-delay: 600ms; animation-name: none;">
+                        <div class="pull-left">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="media-body">
+                            <h2>Have a question or need a custom quote?</h2>
+                            <p>Send to: <strong style="font-size:16px;">info@w2websolutions.com</strong> an email, <!-- or <strong style="font-size:16px;">call now +8801718453452</strong> (call for only refund issue) and--> We will respond within 24 hours maximum. <!--<strong>Address:<u> 48 Railway Parade,Lakemba,NSW-2195, Australia. Phone +61 2 9758 0094</u></strong>--> </p>
+                        </div>
+                    </div>
+                </div><div class="col-sm-4">
+                    <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: hidden; animation-duration: 1000ms; animation-delay: 600ms; animation-name: none;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tbody>
+  <tr><td colspan="7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Follow us on:</td></tr><tr>
+    
+    <!--<img src="images/w2-web-solutions-facebooklogo.png"  class="img-responsive">
+	<img src="images/w2-web-solutions-googlepluslogo.png"  class="img-responsive">
+	<img src="images/w2-web-solutions-tweeterlogo.png" class="img-responsive">
+	<img src="images/w2-web-solutions-youtubelogo.png" class="img-responsive">
+	<img src="images/w2-web-solutions-pinterlogo.png" class="img-responsive">
+	<img src="images/w2-web-solutions-diglogo.png" class="img-responsive">-->
+    <td align="left" valign="top"></td>
+    <td align="left" valign="top"></td>
+    <td align="left" valign="top"></td>
+    <td align="left" valign="top"></td>
+    <td align="left" valign="top" width="15%"><img src="./index_files/w2-web-solutions-facebooklogo.png" class="img-responsive" style="max-width:39px"></td>
+    <td align="left" valign="top" width="15%"><img src="./index_files/w2-web-solutions-googlepluslogo.png" class="img-responsive" style="max-width:39px"></td>
+    <td align="left" valign="top" width="15%"><!--<a href="http://www.linkedin.com/company/w2-web-solutions"><img src="images/w2-web-solutions-linklogo.png" class="img-responsive" style="max-width:39px"></a>--></td>
+  </tr>
+  
+</tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.container-->    
+    </section>  <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                   <p style="text-shadow:1px 1px 1px #000; margin:0px; padding-top:8px;"> © 2020 <a target="_blank" href="http://w2websolutions.com/portfolioes.php#" title="">W2(World Wide) Websolutions</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-sm-7">
+                    <ul class="pull-right">
+                        <!--<li><img src="images/w2-web-solutions-isocertified.png" class="img-responsive" style=" max-height:35px;"></li>-->
+                        <li><img src="./index_files/w2-web-solutions-nortonlogo.png" class="img-responsive" style=" max-height:35px;"></li>
+                        <li><img src="./index_files/w2-web-solutions-esecuritylogo.png" class="img-responsive" style=" max-height:35px;"></li>
+						
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->    <script src="./index_files/bootstrap.min.js.download"></script>
+    <script src="./index_files/jquery.prettyPhoto.js.download"></script>
+    <script src="./index_files/jquery.isotope.min.js.download"></script>
+    <script src="./index_files/main.js.download"></script>
+    <script src="./index_files/wow.min.js.download"></script>
+    
+    <script type="text/javascript" src="http://chat.w2websolutions.com/js/compiled/chat_popup.js"></script>
+ <script type="text/javascript">Mibew.ChatPopup.init({"id":"5ead9d46c2642b57","url":"http:\/\/chat.w2websolutions.com\/chat?locale=en","preferIFrame":true,"modSecurity":true,"forceSecure":false,"style":"","width":640,"height":480,"z-index":-99999999,"resizable":true,"styleLoader":"http:\/\/chat.w2websolutions.com\/chat\/style\/popup"});</script><!-- / mibew button -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./index_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107710984-3');
+</script>
+
+</body></html>

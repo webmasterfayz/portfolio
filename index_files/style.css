@@ -1,0 +1,127 @@
+/* CSS Document */
+html, body {
+    overflow-x: hidden;
+
+}
+.hbg{ background: #7a0000; background-color:#7a0000; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdhMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4MjAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #7a0000 0%, #820000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7a0000), color-stop(100%,#820000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #7a0000 0%,#820000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #7a0000 0%,#820000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #7a0000 0%,#820000 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #7a0000 0%,#820000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a0000', endColorstr='#820000',GradientType=0 ); /* IE6-8 */
+}
+.bord{ border:1px solid #FF0000;}
+.lbg{ 
+background-color:#6e1000;
+padding: 0px 0px;
+
+}
+.floatleft{ float:left;}
+.floatright{ float:right;}
+.peddingleft{padding-left: 10px!important;}
+.peddingright{padding-right: 10px!important;}
+.bothpedding{padding-left: 7px!important;padding-right: 7px!important;}
+.menuzoom{zoom: 1;}
+#bannerimg{background-image:url(/img/w2-web-solution-banner.jpg); background-repeat:no-repeat;background-size:100% 100%;}
+.underbanner{ background: -webkit-linear-gradient(#010102, #790000); /* For Safari */
+background: -o-linear-gradient(#010102, #790000); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#010102, #790000); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#010102, #790000); /*padding-bottom:20px;  Standard syntax (must be last)  */max-height: 135px;
+}
+
+.serviceheader{ background: -webkit-linear-gradient(#cdcdc8, #d0d1cb); /* For Safari */
+background: -o-linear-gradient(#cdcdc8, #d0d1cb); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#cdcdc8, #d0d1cb); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#cdcdc8, #d0d1cb); /*padding-bottom:20px;  Standard syntax (must be last)  */max-height: 419px;
+}
+.logos-titles{font-family: 'Helvetica Neue',Helvetica, sans-serif;
+line-height: 1em;
+font-weight:bold;
+font-size: 18px;
+text-shadow:0px 0px 0 rgb(213,213,213),0px 1px 0 rgb(171,171,171), 0px 2px 0 rgb(129,129,129),0px 3px 2px rgba(0,0,0,0.6),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);	
+	color:#FFFFFF; padding-top:8px; text-transform:uppercase; zoom:1;}
+.logos-div{ position:relative;display:inline;}
+#webdesign{ background: -webkit-linear-gradient(#870000, #8d0000); /* For Safari */
+background: -o-linear-gradient(#870000, #8d0000); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#870000, #8d0000); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#870000, #8d0000); /* Standard syntax (must be last) */ }
+#webdesign h1{ text-transform:uppercase; font-family: 'Helvetica Neue',Helvetica, sans-serif;
+color: #ffffff;
+font-weight:bold;
+font-size: 33px;
+text-shadow:0px 0px 0 rgb(213,213,213),0px 1px 0 rgb(171,171,171), 0px 2px 0 rgb(129,129,129),0px 3px 2px rgba(0,0,0,0.6),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+zoom:1; }
+#webdevelop{ background: -webkit-linear-gradient(#850101, #8d0000); /* For Safari */
+background: -o-linear-gradient(#850101, #8d0000); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#850101, #8d0000); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#850101, #8d0000); padding-bottom:8px; /* Standard syntax (must be last) */  }
+#webdevelop h2{ font-size:28px; text-transform:uppercase; font-family: 'Helvetica Neue',Helvetica, sans-serif;
+color: #ffffff;
+text-shadow:0px 0px 0 rgb(213,213,213),0px 1px 0 rgb(171,171,171), 0px 2px 0 rgb(129,129,129),0px 3px 2px rgba(0,0,0,0.6),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+zoom:1; }
+.webdevcontent{font-size:16px; text-transform:none; 
+font-family: 'Helvetica Neue',Helvetica, sans-serif;
+text-shadow:0px 0px 0 rgb(213,213,213),0px 1px 0 rgb(171,171,171), 0px 2px 0 rgb(129,129,129),0px 3px 2px rgba(0,0,0,0.6),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+ font-weight:600; padding-top:8px; color:#FFFFFF; line-height:20px;}
+#seoservice{background: -webkit-linear-gradient(#860000, #8c0000); /* For Safari */
+background: -o-linear-gradient(#850101, #8d0000); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#850101, #8d0000); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#850101, #8d0000); /* Standard syntax (must be last) */ }
+.seo{ background-image:url(../img/w2websolutions-seo-services.png); background-repeat:no-repeat; height:584px;}
+#seoservice h3 {font-family:Arial, Helvetica, sans-serif; font-size:22px; text-transform:uppercase; color:#FFFFFF;
+text-shadow:0px 0px 0 rgb(213,213,213),0px 1px 0 rgb(171,171,171), 0px 2px 0 rgb(129,129,129),0px 3px 2px rgba(0,0,0,0.6),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+zoom:1; padding-top:5px;}
+
+#fotter{background: -webkit-linear-gradient(#7a0000, #8a0101); /* For Safari */
+background: -o-linear-gradient(#7a0000, #8a0101); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#7a0000, #8a0101); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#7a0000, #8a0101); /* Standard syntax (must be last) */ }
+.bordertwoside{ border-bottom:1px solid #c83333; border-top:1px solid #490101; margin-top:5px;}
+.footerlinkhead{ color:#FFFFFF; font-size:20px!important; text-shadow:1px 1px #000;
+-webkit-text-shadow:1px 1px #000;-moz-text-shadow:1px 1px #000;
+-o-text-shadow:1px 1px #000;
+-ms-text-shadow:1px 1px #000;}
+#bottom{    background: -webkit-linear-gradient(#860000, #8c0000); /* For Safari */
+background: -o-linear-gradient(#850101, #8d0000); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#850101, #8d0000); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#850101, #8d0000); /* Standard syntax (must be last) */}
+/*
+--------------------------------------------------------------------------
+UItoTop jQuery Plugin 1.1
+http://www.mattvarone.com/web-design/uitotop-jquery-plugin/
+--------------------------------------------------------------------------
+*/
+
+#toTop {
+        display:none;
+        text-decoration:none;
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        overflow:hidden;
+        width:51px;
+        height:51px;
+        border:none;
+        text-indent:-999px;
+        background:url(../img/ui.totop.png) no-repeat left top;
+}
+
+#toTopHover {
+        background:url(../img/ui.totop.png) no-repeat left -51px;
+        width:51px;
+        height:51px;
+        display:block;
+        overflow:hidden;
+        float:left;
+        opacity: 0;
+        -moz-opacity: 0;
+        filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+        outline:none;
+}
